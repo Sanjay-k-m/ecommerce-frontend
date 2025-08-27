@@ -7,7 +7,7 @@ import "./app.css";
 import type { Route } from "./+types/root";
 import { StrictMode } from "react";
 import { Toaster } from "./components/ui/sonner";
-
+import React from "react";
 
 
 export const links = () => [

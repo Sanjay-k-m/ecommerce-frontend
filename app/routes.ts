@@ -1,10 +1,12 @@
-import { type RouteConfig, index, route } from "@react-router/dev/routes";
-import { authRoutes } from "./features/auth/routes.config";
-import { errorRoutes } from "./errors/routes/routes.config";
+import { type RouteConfig, index,  } from '@react-router/dev/routes';
+import { authRoutes } from './features/auth/routes.config';
+import { errorRoutes } from './errors/routes/routes.config';
+import { homeRoutes } from './features/home/routes.config';
 // import { errorRoutes } from "./errors/routes";
 
 export default [
-  index("features/auth/routes/login.tsx"),
+  index('features/auth/routes/login.tsx'),
   ...authRoutes,
   ...errorRoutes,
+  ...homeRoutes,
 ] satisfies RouteConfig;
