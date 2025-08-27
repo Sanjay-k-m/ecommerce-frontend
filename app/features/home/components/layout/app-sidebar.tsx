@@ -41,29 +41,40 @@ const data = {
   },
   navMain: [
     {
-      title: 'Dashboard',
+      title: 'Electronics',
       url: '#',
-      icon: IconDashboard,
+      items: [
+        { title: 'Mobile Phones', url: '#' },
+        { title: 'Laptops', url: '#' },
+        { title: 'Cameras', url: '#' },
+      ],
     },
     {
-      title: 'Lifecycle',
+      title: 'Clothing',
       url: '#',
-      icon: IconListDetails,
+      items: [
+        { title: 'Men', url: '#' },
+        { title: 'Women', url: '#' },
+        { title: 'Kids', url: '#' },
+      ],
     },
     {
-      title: 'Analytics',
+      title: 'Accessories',
       url: '#',
-      icon: IconChartBar,
+      items: [
+        { title: 'Watches', url: '#' },
+        { title: 'Bags', url: '#' },
+        { title: 'Jewelry', url: '#' },
+      ],
     },
     {
-      title: 'Projects',
+      title: 'Home & Living',
       url: '#',
-      icon: IconFolder,
-    },
-    {
-      title: 'Team',
-      url: '#',
-      icon: IconUsers,
+      items: [
+        { title: 'Furniture', url: '#' },
+        { title: 'Kitchen', url: '#' },
+        { title: 'Decor', url: '#' },
+      ],
     },
   ],
   navClouds: [

@@ -3,6 +3,7 @@ import { SectionCards } from './components/layout/section-cards';
 import { SiteHeader } from './components/layout/site-header';
 import { SidebarInset, SidebarProvider } from '~/components/ui/sidebar';
 import React from 'react';
+import { ModeToggle } from '~/components/mode-toggle';
 
 export default function Page() {
   return (
@@ -23,7 +24,9 @@ export default function Page() {
               <SectionCards />
               <div className="px-4 lg:px-6">
                 {/* <ChartAreaInteractive /> */}
+                
               </div>
+              
               {/* <DataTable data={data} /> */}
             </div>
           </div>
