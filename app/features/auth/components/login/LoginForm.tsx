@@ -17,6 +17,7 @@ import { LoadingButton } from '~/components/common/ui/LoadingButton';
 import { TextDivider } from '~/components/common/ui/TextDivider';
 import { PrivacyPolicy } from '../common/PrivacyPolicy';
 import type { AxiosError } from 'axios';
+import { HOME_ROUTES } from '~/features/home/routes.paths';
 
 export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) {
   const navigate = useNavigate();
@@ -33,13 +34,12 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
   const onSubmit: SubmitHandler<LoginFormData> = async (data) => {
     try {
       const response = await login(data);
-      navigate(AUTH_ROUTES.logout, { replace: true });
+      navigate(HOME_ROUTES.home, { replace: true });
       console.log(response);
       toast.success(response.message);
     } catch (err: unknown) {
       const error = err as AxiosError;
       if (error) toast.error(error.message);
-      console.log(error, 'LLLLLLL');
     }
   };
   return (

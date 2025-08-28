@@ -15,6 +15,7 @@ export const useUserStore = create<UserState>((set) => ({
     set({ loading: true });
     try {
       const response = await userService.getProfile();
+      console.log('Profile:', response);
       // Only update if status is 'success'
       if (response.status === 'success') {
         set({ user: response.data?.user || null });

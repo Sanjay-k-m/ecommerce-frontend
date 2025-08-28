@@ -1,7 +1,7 @@
 import React from 'react';
-import type { Route } from './+types/signup';
 import { ResetPasswordForm } from '../components/forgot-password/ResetPasswordForm';
 import { useSearchParams } from 'react-router-dom';
+import type { Route } from './+types/forgot-password';
 export function meta({}: Route.MetaArgs) {
   return [{ title: 'change password' }, { name: 'description', content: 'change password' }];
 }

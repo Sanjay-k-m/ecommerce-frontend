@@ -9,9 +9,11 @@ import {
   IconFileWord,
   IconHelp,
   IconInnerShadowTop,
+ 
   IconReport,
   IconSearch,
   IconSettings,
+
 } from '@tabler/icons-react';
 
 // import { NavDocuments } from '@/components/nav-documents';
@@ -41,7 +43,7 @@ const data = {
       title: 'Electronics',
       url: '#',
       items: [
-        { title: 'Mobile Phones', url: '#', isActive: true },
+        { title: 'Mobile Phones', url: '#' },
         { title: 'Laptops', url: '#' },
         { title: 'Cameras', url: '#' },
       ],

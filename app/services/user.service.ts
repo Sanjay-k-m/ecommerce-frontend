@@ -9,7 +9,7 @@ export interface UserService {
 export const userService: UserService = {
   getProfile: async () => {
     try {
-      const response = await apiWithAuth.get<GetProfileResponse>('/auth/me');
+      const response = await apiWithAuth.get<GetProfileResponse>('/user/profile');
       return response.data;
     } catch (error: unknown) {
       if (error instanceof AxiosError) throw error.response?.data;

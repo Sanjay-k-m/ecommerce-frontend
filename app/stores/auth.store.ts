@@ -22,7 +22,7 @@ interface AuthState {
   registerInitiate: (payload: RegisterInitiateRequest) => Promise<BasicResponse>;
   registerConfirm: (payload: RegisterConfirmRequest) => Promise<RegisterConfirmationResponse>;
   refreshTokens: () => Promise<void>;
-  logout: () => Promise<void>;
+  logout: () => Promise<BasicResponse>;
   forgotPasswordInitiate: (
     payload: ForgotPasswordInitiateRequest,
   ) => Promise<ForgotPasswordInitiationResponse>;
@@ -113,7 +113,8 @@ export const useAuthStore = create<AuthState>((set) => ({
 
   logout: async () => {
     try {
-      await authService.logout();
+      const response = await authService.logout();
+      return { status: response.status, message: response.message };
     } finally {
       tokenStorage.clearTokens();
       set({ isAuthenticated: false });

@@ -1,6 +1,6 @@
 'use client';
 
-import { IconCirclePlusFilled, IconMail, } from '@tabler/icons-react';
+import { IconCirclePlusFilled, IconMail } from '@tabler/icons-react';
 
 import { Button } from '~/components/ui/button';
 import {
@@ -22,9 +22,9 @@ export function NavMain({
     url: string;
     // icon?: Icon;
     items?: {
-      isActive: boolean ;
       title: string;
       url: string;
+      isActive: boolean;
     }[];
   }[];
 }) {
@@ -64,10 +64,10 @@ export function NavMain({
             <Collapsible
               key={item.title}
               title={item.title}
-              defaultOpen = {false}
+              defaultOpen={false}
               className="group/collapsible"
             >
-              <SidebarGroup >
+              <SidebarGroup>
                 <SidebarGroupLabel
                   asChild
                   className="group/label text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm"
@@ -77,7 +77,7 @@ export function NavMain({
                     <ChevronRight className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90" />
                   </CollapsibleTrigger>
                 </SidebarGroupLabel>
-                <CollapsibleContent  >
+                <CollapsibleContent>
                   <SidebarGroupContent>
                     <SidebarMenu>
                       {item.items?.map((item) => (

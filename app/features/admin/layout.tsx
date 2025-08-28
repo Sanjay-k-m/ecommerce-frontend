@@ -3,9 +3,9 @@ import { SectionCards } from './components/layout/section-cards';
 import { SiteHeader } from './components/layout/site-header';
 import { SidebarInset, SidebarProvider } from '~/components/ui/sidebar';
 import React from 'react';
-import type { Route } from './+types/layout';
+import type { Route } from '../../+types/root';
 export function meta({}: Route.MetaArgs) {
-  return [{ title: 'Home' }, { name: 'home', content: 'Ecommerce' }];
+  return [{ title: 'Admin' }, { name: 'Admin', content: 'Admin' }];
 }
 
 export default function Page() {

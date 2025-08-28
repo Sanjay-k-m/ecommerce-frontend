@@ -1,5 +1,5 @@
 export const AUTH_ROUTES = {
-  login: '/',
+  login: '/auth/login',
   signup: '/auth/sign-up',
   signupVerifyOtp: (email: string) => `/auth/sign-up/verify/${email}`,
   forgotPassword: '/auth/forgot-password',

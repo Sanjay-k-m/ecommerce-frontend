@@ -5,8 +5,8 @@ import { homeRoutes } from './features/home/routes.config';
 // import { errorRoutes } from "./errors/routes";
 
 export default [
-  index('features/auth/routes/login.tsx'),
+  index('features/home/layout.tsx'),
   ...authRoutes,
   ...errorRoutes,
-  ...homeRoutes,
+  // ...homeRoutes,
 ] satisfies RouteConfig;
